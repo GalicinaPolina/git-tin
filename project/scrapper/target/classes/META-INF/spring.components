@@ -1,0 +1,1 @@
+configuration.ApplicationConfig=org.springframework.boot.context.properties.ConfigurationProperties

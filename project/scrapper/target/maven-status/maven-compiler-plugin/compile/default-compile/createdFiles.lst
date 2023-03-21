@@ -1,1 +1,4 @@
+META-INF\spring.components
+configuration\ApplicationConfig.class
 tinkGr\App.class
+META-INF\spring-configuration-metadata.json
