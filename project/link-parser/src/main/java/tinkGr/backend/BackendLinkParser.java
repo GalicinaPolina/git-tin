@@ -10,4 +10,8 @@ public record BackendLinkParser(String URL) {
             return links[link_type].getData(URL);
         }
     }
+    private int countSymbols(String a, String b) {
+        int i = a.length() - a.replace(b, "").length();
+        return i;
+    }
 }
