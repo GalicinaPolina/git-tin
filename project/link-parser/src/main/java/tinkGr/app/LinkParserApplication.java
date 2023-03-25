@@ -1,16 +1,16 @@
 package tinkGr.app;
 
-import tinkGr.configuration.*;
+import configuration.RecordBot;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 
 @SpringBootApplication
-@EnableConfigurationProperties(ApplicationConfig.class)
+@EnableConfigurationProperties(RecordBot.class)
 public class LinkParserApplication {
     public static void main(String[] args) {
         var ctx = SpringApplication.run(LinkParserApplication.class, args);
-        ApplicationConfig config = ctx.getBean(ApplicationConfig.class);
+        RecordBot config = ctx.getBean(RecordBot.class);
         System.out.println(config);
     }
 }
