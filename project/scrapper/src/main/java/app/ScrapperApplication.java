@@ -10,7 +10,7 @@ import org.springframework.boot.context.properties.EnableConfigurationProperties
 public class ScrapperApplication {
 public static void main(String[] args) {
         var ctx = SpringApplication.run(ScrapperApplication.class, args);
-    RecordScrapper config = ctx.getBean(RecordScrapper.class);
+        RecordScrapper config = ctx.getBean(RecordScrapper.class);
         System.out.println(config);
         }
         }
