@@ -1,1 +1,3 @@
-configuration.ApplicationConfig=org.springframework.boot.context.properties.ConfigurationProperties
+app.BotApplication=org.springframework.stereotype.Component,org.springframework.boot.SpringBootConfiguration
+app.BotController=org.springframework.stereotype.Component
+configuration.RecordBot=org.springframework.boot.context.properties.ConfigurationProperties

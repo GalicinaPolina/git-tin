@@ -1,17 +1,17 @@
 package app;
 
-import configuration.*;
+import configuration.RecordScrapper;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
-
 @SpringBootApplication
-@EnableConfigurationProperties(ApplicationConfig.class)
+@EnableConfigurationProperties(RecordScrapper.class)
 public class ScrapperApplication {
-    public static void main(String[] args) {
+public static void main(String[] args) {
         var ctx = SpringApplication.run(ScrapperApplication.class, args);
-        ApplicationConfig config = ctx.getBean(ApplicationConfig.class);
+    RecordScrapper config = ctx.getBean(RecordScrapper.class);
         System.out.println(config);
-    }
-}
+        }
+        }
+
