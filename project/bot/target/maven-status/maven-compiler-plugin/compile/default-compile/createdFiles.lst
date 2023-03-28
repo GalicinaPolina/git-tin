@@ -1,6 +1,0 @@
-app\BotApplication.class
-META-INF\spring.components
-tinkGr\App.class
-app\BotController.class
-configuration\RecordBot.class
-META-INF\spring-configuration-metadata.json
