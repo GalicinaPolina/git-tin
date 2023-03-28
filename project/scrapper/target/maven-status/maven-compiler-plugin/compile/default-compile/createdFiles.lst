@@ -1,1 +1,5 @@
+configuration\RecordScrapper.class
+META-INF\spring.components
 tinkGr\App.class
+app\ScrapperApplication.class
+META-INF\spring-configuration-metadata.json
