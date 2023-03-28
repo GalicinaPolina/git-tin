@@ -20,7 +20,7 @@ public class BotController {
     }
 
     @ResponseStatus(code = HttpStatus.BAD_REQUEST)
-    //@ExceptionHandler(MethodArgumentNotValidException.class)
+    @ExceptionHandler(MethodArgumentNotValidException.class)
     public ApiErrorResponse handleException(MethodArgumentNotValidException e){
         return new ApiErrorResponse("Некорректный запрос",
                 e.getStatusCode().toString(),
