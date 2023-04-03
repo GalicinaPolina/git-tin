@@ -1,2 +1,4 @@
 app.ScrapperApplication=org.springframework.stereotype.Component,org.springframework.boot.SpringBootConfiguration
+app.ScrapperLinksController=org.springframework.stereotype.Component
+app.ScrapperTelegramChatController=org.springframework.stereotype.Component
 configuration.RecordScrapper=org.springframework.boot.context.properties.ConfigurationProperties
