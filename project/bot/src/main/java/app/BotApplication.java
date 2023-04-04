@@ -1,4 +1,5 @@
 package app;
+import TelegramBot.TgBot;
 import configuration.*;
 
 import org.springframework.boot.SpringApplication;
@@ -10,6 +11,7 @@ public class BotApplication {
     public static void main(String[] args) {
         var ctx = SpringApplication.run(BotApplication.class, args);
         RecordBot config = ctx.getBean(RecordBot.class);
+        new TgBot().startBot();
         System.out.println(config);
     }
 }
