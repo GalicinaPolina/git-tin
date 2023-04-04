@@ -1,16 +1,16 @@
 package app;
 
-import configuration.RecordBot;
+import configuration.RecordLink;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 
 @SpringBootApplication
-@EnableConfigurationProperties(RecordBot.class)
+@EnableConfigurationProperties(RecordLink.class)
 public class LinkParserApplication {
     public static void main(String[] args) {
         var ctx = SpringApplication.run(LinkParserApplication.class, args);
-        RecordBot config = ctx.getBean(RecordBot.class);
+        RecordLink config = ctx.getBean(RecordLink.class);
         System.out.println(config);
     }
 }
