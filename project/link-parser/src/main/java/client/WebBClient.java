@@ -1,8 +1,5 @@
 package client;
-import io.netty.channel.ChannelOption;
-import io.netty.handler.timeout.ReadTimeoutHandler;
-import io.netty.handler.timeout.WriteTimeoutHandler;
-import org.slf4j.LoggerFactory;
+
 import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Component;
 import org.springframework.web.reactive.function.client.ClientRequest;
@@ -14,8 +11,7 @@ import reactor.core.publisher.Mono;
 public class WebBClient {
 
     @Bean
-    public static ClientResponse createWebClient(ClientRequest request)
-    {
+    public static ClientResponse createWebClient(ClientRequest request) {
         WebClient webClient = WebClient.builder().baseUrl("http://localhost:8080").build();
 
         ClientResponse response = webClient.post().uri("/url:{url}")
@@ -26,3 +22,4 @@ public class WebBClient {
 
         return response;
     }
+}
