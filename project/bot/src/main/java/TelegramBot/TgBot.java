@@ -9,12 +9,13 @@ import com.pengrad.telegrambot.request.SendMessage;
 import com.pengrad.telegrambot.request.SetMyCommands;
 import com.pengrad.telegrambot.response.SendResponse;
 import org.hibernate.validator.internal.constraintvalidators.bv.time.futureorpresent.AbstractFutureOrPresentJavaTimeValidator;
-//"6201413186:AAGMfU2EOz8dBCRjRd0FqSGsFXu96gOi6kA"
-//"#{bot.token}"
+import org.springframework.beans.factory.annotation.Value;
 import java.util.List;
 
 public class TgBot {
-    TelegramBot bot = new TelegramBot("6201413186:AAGMfU2EOz8dBCRjRd0FqSGsFXu96gOi6kA");
+    @Value("${bot.token}")
+    private String botToken;
+    TelegramBot bot = new TelegramBot(botToken);
     public void startBot(){
         bot.setUpdatesListener(new UpdatesListener() {
             @Override

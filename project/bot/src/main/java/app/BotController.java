@@ -15,7 +15,7 @@ import org.telegram.telegrambots.meta.api.objects.Update;
 
 @RequestMapping("/updates")
 @RestController
-public class BotController extends TelegramLongPollingBot {
+public class BotController {
     @ApiResponse(responseCode = "200", description = "Обработано")
     @ApiResponse(responseCode = "400", description = "Некорректный запрос")
 
@@ -33,27 +33,5 @@ public class BotController extends TelegramLongPollingBot {
                 e.getObjectName(),
                 e.getLocalizedMessage(),
                 new String[]{String.valueOf(e.getStackTrace())});
-    }
-    @Value("${bot.name}")
-    private String botName;
-    @Value("${bot.token}")
-    private String botToken;
-
-
-    @Override
-    public String getBotUsername() {
-        return botName;
-    }
-
-    @Override
-    public String getBotToken() {
-        return botToken;
-    }
-
-    @Override
-    public void onUpdateReceived(Update update) {
-        var originalMessage = update.getMessage();
-        System.out.println(originalMessage.getText());
-
     }
 }

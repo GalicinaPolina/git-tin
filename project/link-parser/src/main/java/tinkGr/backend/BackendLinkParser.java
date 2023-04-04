@@ -1,4 +1,8 @@
 package tinkGr.backend;
+import dto.*;
+import reactor.core.publisher.Mono;
+
+import java.net.URISyntaxException;
 public record BackendLinkParser(String URL) {
     public String getData(){
         if (!(URL.contains("https://github.com/") || URL.contains("https://stackoverflow.com/questions/"))){

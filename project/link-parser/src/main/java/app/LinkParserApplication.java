@@ -1,4 +1,4 @@
-package tinkGr.app;
+package app;
 
 import configuration.RecordBot;
 import org.springframework.boot.SpringApplication;
