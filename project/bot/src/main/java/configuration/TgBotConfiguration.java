@@ -7,9 +7,7 @@ import TelegramBot.TgBot;
 @Configuration
 public class TgBotConfiguration {
     @Bean("tg_bot_starter")
-    public TgBot startBot(){
-        TgBot tgBot = new TgBot();
-        tgBot.startBot();
+    public TgBot startBot(TgBot tgBot){
         return tgBot;
     }
 }
