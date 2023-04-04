@@ -75,6 +75,12 @@
             <version>1.6.6</version>
             <type>pom</type>
         </dependency>
+        <!-- TG bot -->
+        <dependency>
+            <groupId>com.github.pengrad</groupId>
+            <artifactId>java-telegram-bot-api</artifactId>
+            <version>6.6.0</version>
+        </dependency>
         <dependency>
             <groupId>org.telegram</groupId>
             <artifactId>telegrambots-spring-boot-starter</artifactId>
