@@ -4,6 +4,8 @@ import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.*;
+import org.telegram.telegrambots.bots.TelegramLongPollingBot;
+
 @RequestMapping("/tg-chat")
 @RestController
 public class ScrapperTelegramChatController {
@@ -22,7 +24,7 @@ public class ScrapperTelegramChatController {
     @ExceptionHandler(MethodArgumentNotValidException.class)
     public ApiErrorResponse handleException(MethodArgumentNotValidException e){
         return new ApiErrorResponse("Некорректный запрос",
-                e.getStatusCode().toString(),
+                 e.getStatusCode().toString(),
                 e.getObjectName(),
                 e.getLocalizedMessage(),
                 new String[]{String.valueOf(e.getStackTrace())});
