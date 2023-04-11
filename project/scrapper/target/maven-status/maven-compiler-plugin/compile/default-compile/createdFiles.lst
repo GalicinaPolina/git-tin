@@ -1,1 +1,12 @@
+configuration\RecordScrapper.class
+dto\AddLinkRequest.class
+META-INF\spring.components
+dto\ListLinksResponse.class
+dto\RemoveLinkRequest.class
 tinkGr\App.class
+dto\ApiErrorResponse.class
+dto\LinkResponse.class
+app\ScrapperApplication.class
+META-INF\spring-configuration-metadata.json
+app\ScrapperTelegramChatController.class
+app\ScrapperLinksController.class

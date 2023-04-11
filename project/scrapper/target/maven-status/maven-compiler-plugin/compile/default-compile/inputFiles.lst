@@ -1,1 +1,10 @@
-C:\tink\project\scrapper\src\main\java\tinkGr\App.java
+C:\tinkoff\project\scrapper\src\main\java\dto\ListLinksResponse.java
+C:\tinkoff\project\scrapper\src\main\java\dto\ApiErrorResponse.java
+C:\tinkoff\project\scrapper\src\main\java\dto\RemoveLinkRequest.java
+C:\tinkoff\project\scrapper\src\main\java\tinkGr\App.java
+C:\tinkoff\project\scrapper\src\main\java\dto\AddLinkRequest.java
+C:\tinkoff\project\scrapper\src\main\java\app\ScrapperApplication.java
+C:\tinkoff\project\scrapper\src\main\java\dto\LinkResponse.java
+C:\tinkoff\project\scrapper\src\main\java\app\ScrapperLinksController.java
+C:\tinkoff\project\scrapper\src\main\java\app\ScrapperTelegramChatController.java
+C:\tinkoff\project\scrapper\src\main\java\configuration\RecordScrapper.java
