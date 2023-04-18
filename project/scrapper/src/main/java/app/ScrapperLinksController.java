@@ -7,11 +7,12 @@ import org.springframework.web.bind.annotation.*;
 
 import java.net.URI;
 import java.net.URISyntaxException;
+
 @RequestMapping("/links")
 @RestController
 public class ScrapperLinksController {
-    @ApiResponse(responseCode = "200", description = "Зарегистрирован чат")
-    @ApiResponse(responseCode = "400", description = "Некорректный запрос")
+    @ApiResponse(responseCode = "200", description = "Чат зарегистрирован")
+    @ApiResponse(responseCode = "400", description = "Некорректные параметры запроса")
     @ApiResponse(responseCode = "404", description = "Ссылка не найдена")
     @GetMapping
     ListLinksResponse getLinks(@RequestHeader int id){
@@ -22,13 +23,13 @@ public class ScrapperLinksController {
         return new AddLinkRequest(new URI("add"));
     }
     @DeleteMapping
-    RemoveLinkRequest deletLink(@RequestHeader int id) throws URISyntaxException {
+    RemoveLinkRequest deleteLink(@RequestHeader int id) throws URISyntaxException {
         return new RemoveLinkRequest(new URI("delete"));
     }
     @ResponseStatus(code = HttpStatus.BAD_REQUEST)
     @ExceptionHandler(MethodArgumentNotValidException.class)
     public ApiErrorResponse handleException(MethodArgumentNotValidException e){
-        return new ApiErrorResponse("Некорректный запрос",
+        return new ApiErrorResponse("Некорректные параметры запроса",
                 e.getStatusCode().toString(),
                 e.getObjectName(),
                 e.getLocalizedMessage(),
@@ -45,4 +46,3 @@ public class ScrapperLinksController {
     }
 
 }
-
