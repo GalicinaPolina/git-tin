@@ -6,7 +6,12 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.validation.annotation.Validated;
 import reactor.core.scheduler.Scheduler;
 
-import java.time.Duration;@Validated
+import java.time.Duration;
+
+@Validated
 @ConfigurationProperties(prefix = "app", ignoreUnknownFields = false)
-public record RecordScrapper(@NotNull String test) { @Value("${app.scheduler.interval}")
-private static Duration schedulerInterval;}
+public record RecordScrapper(@NotNull String test, Scheduler scheduler) {
+    @Value("${app.scheduler.interval}")
+    private static Duration schedulerInterval;
+    static AccessType databaseAccessType;
+}

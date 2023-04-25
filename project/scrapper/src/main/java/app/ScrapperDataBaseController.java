@@ -1,5 +1,4 @@
 package app;
-
 import dbServices.ChatLogic;
 import dbServices.LinkLogic;
 import entity.Chat;
@@ -8,22 +7,24 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/scrapper")
-  public class ScrapperDataBaseController {
-@Autowired
+public class ScrapperDataBaseController {
+    @Autowired
     ChatLogic chatLogic;
-@Autowired
+    @Autowired
     LinkLogic linkLogic;
     @GetMapping("/chats")
-@ResponseBody
-public Page<Chat> chats(){
+    @ResponseBody
+    public List<Chat> chats(){
         return chatLogic.getChats();
-        }
-@GetMapping("/links")
-@ResponseBody
-public Page<Link> links(){
+    }
+    @GetMapping("/links")
+    @ResponseBody
+    public List<Link> links(){
         return linkLogic.getLinks();
-        }
+    }
 
-        }
+}
