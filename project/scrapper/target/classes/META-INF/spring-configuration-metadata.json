@@ -1,0 +1,17 @@
+{
+  "groups": [
+    {
+      "name": "app",
+      "type": "configuration.RecordScrapper",
+      "sourceType": "configuration.RecordScrapper"
+    }
+  ],
+  "properties": [
+    {
+      "name": "app.test",
+      "type": "java.lang.String",
+      "sourceType": "configuration.RecordScrapper"
+    }
+  ],
+  "hints": []
+}
