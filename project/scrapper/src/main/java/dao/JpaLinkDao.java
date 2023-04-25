@@ -1,17 +1,17 @@
 package dao;
-
 import entity.Link;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityTransaction;
 import jakarta.persistence.Query;
 import org.springframework.dao.support.DaoSupport;
 
+import java.sql.Timestamp;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import java.util.function.Consumer;
 
-public class JpaLinkDao implements Dao<Link>{
+public class JpaLinkDao implements Dao<Link> {
     private EntityManager entityManager;
 
     @Override
@@ -35,6 +35,7 @@ public class JpaLinkDao implements Dao<Link>{
         link.setId(Objects.requireNonNull(Long.parseLong(params[0]), "Id cannot be null"));
         link.setChat_id(Objects.requireNonNull(Long.parseLong(params[1]), "Chat_id cannot be null"));
         link.setLink_url(Objects.requireNonNull(params[2], "Link cannot be null"));
+        link.setDatetimestamp(Objects.requireNonNull(Timestamp.valueOf(params[3]), "Link cannot be null"));
         executeInsideTransaction(entityManager -> entityManager.merge(link));
     }
 
@@ -42,14 +43,14 @@ public class JpaLinkDao implements Dao<Link>{
     public void delete(Link link) {
         executeInsideTransaction(entityManager -> entityManager.remove(link));
     }
+
     private void executeInsideTransaction(Consumer<EntityManager> action) {
         EntityTransaction tx = entityManager.getTransaction();
         try {
             tx.begin();
             action.accept(entityManager);
             tx.commit();
-        }
-        catch (RuntimeException e) {
+        } catch (RuntimeException e) {
             tx.rollback();
             throw e;
         }

@@ -1,10 +1,11 @@
 package client;
 
+import dto.SOResponse;
 import lombok.NoArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.MediaType;
 import org.springframework.web.reactive.function.client.WebClient;
-import dto.*;
+
 
 public class SOClient {
     private static final String STACK_OVERFLOW_BASE_URL = "https://api.stackexchange.com";
@@ -27,7 +28,7 @@ public class SOClient {
                 .build();
     }
 
-    SOResponse fetchQuestion(long id){
+    public SOResponse fetchQuestion(long id){
         return webClient
                 .get()
                 .uri("/questions/{id}", id)
