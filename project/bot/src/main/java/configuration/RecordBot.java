@@ -4,4 +4,4 @@ import org.springframework.validation.annotation.Validated;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 @Validated
 @ConfigurationProperties(prefix = "app", ignoreUnknownFields = false)
-public record RecordBot(@NotNull String test) {}
+public record RecordBot(@NotNull String test,@NotNull boolean useQueue) {}
