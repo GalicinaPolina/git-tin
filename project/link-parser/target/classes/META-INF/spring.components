@@ -1,0 +1,2 @@
+tinkGr.app.LinkParserApplication=org.springframework.stereotype.Component,org.springframework.boot.SpringBootConfiguration
+tinkGr.app.LinkParserController=org.springframework.stereotype.Component

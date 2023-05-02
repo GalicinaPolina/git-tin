@@ -1,1 +1,7 @@
-tinkGr\App.class
+tinkGr\app\LinkParserController.class
+tinkGr\backend\StackOverflowURL.class
+tinkGr\backend\BackendLinkParser.class
+tinkGr\app\LinkParserApplication.class
+tinkGr\backend\Links.class
+tinkGr\backend\App.class
+tinkGr\backend\GitHubURL.class
