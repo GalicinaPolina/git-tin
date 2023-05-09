@@ -1,1 +1,4 @@
+app\BotApplication.class
 tinkGr\App.class
+configuration\RecordBot.class
+META-INF\spring-configuration-metadata.json
