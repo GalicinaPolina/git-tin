@@ -16,15 +16,17 @@ public class ScrapperDataBaseController {
     ChatLogic chatLogic;
     @Autowired
     LinkLogic linkLogic;
+
     @GetMapping("/chats")
     @ResponseBody
-    public List<Chat> chats(){
+    public List<Chat> chats() {
         return chatLogic.getChats();
     }
+
     @GetMapping("/links")
     @ResponseBody
-    public List<Link> links(){
+    public List<Link> links() {
         return linkLogic.getLinks();
     }
-
 }
+

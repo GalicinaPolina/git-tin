@@ -9,15 +9,15 @@ import com.pengrad.telegrambot.request.SendMessage;
 import com.pengrad.telegrambot.request.SetMyCommands;
 import com.pengrad.telegrambot.response.SendResponse;
 import org.hibernate.validator.internal.constraintvalidators.bv.time.futureorpresent.AbstractFutureOrPresentJavaTimeValidator;
-import org.springframework.beans.factory.annotation.Value;
+//"6201413186:AAGMfU2EOz8dBCRjRd0FqSGsFXu96gOi6kA"
+//"#{bot.token}"
 import java.util.List;
 
 public class TgBot {
-    @Value("${bot.token}")
-    private String botToken;
-    TelegramBot bot = new TelegramBot(botToken);
+    private TgBotMethods tgBotMethods;
+    TelegramBot bot = new TelegramBot("6201413186:AAGMfU2EOz8dBCRjRd0FqSGsFXu96gOi6kA");
     public void startBot(){
-        TgBotMethods tgBotMethods = new TgBotMethods();
+        tgBotMethods = new TgBotMethods();
         tgBotMethods.setBot(bot);
         tgBotMethods.setUpdateListener();
 
@@ -28,5 +28,8 @@ public class TgBot {
                 new BotCommand("list", "показать список отслеживаемых ссылок")};
         bot.execute(new SetMyCommands(botCommands));
 
+    }
+    public TgBotMethods getTgBotMethods(){
+        return this.tgBotMethods;
     }
 }
