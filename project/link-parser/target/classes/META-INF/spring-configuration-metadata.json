@@ -1,0 +1,17 @@
+{
+  "groups": [
+    {
+      "name": "app",
+      "type": "configuration.RecordLink",
+      "sourceType": "configuration.RecordLink"
+    }
+  ],
+  "properties": [
+    {
+      "name": "app.test",
+      "type": "java.lang.String",
+      "sourceType": "configuration.RecordLink"
+    }
+  ],
+  "hints": []
+}
