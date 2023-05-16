@@ -2,15 +2,15 @@
   "groups": [
     {
       "name": "app",
-      "type": "tinkGr.configuration.ApplicationConfig",
-      "sourceType": "tinkGr.configuration.ApplicationConfig"
+      "type": "configuration.RecordLink",
+      "sourceType": "configuration.RecordLink"
     }
   ],
   "properties": [
     {
       "name": "app.test",
       "type": "java.lang.String",
-      "sourceType": "tinkGr.configuration.ApplicationConfig"
+      "sourceType": "configuration.RecordLink"
     }
   ],
   "hints": []
